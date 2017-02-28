@@ -71,8 +71,24 @@
         </ListView>
         <CheckBox x:Name="cbToggleAll" Content="Toggle All" Grid.Column="1" HorizontalAlignment="Left" Margin="12,8,0,0" VerticalAlignment="Top" Checked="cbToggleAll_Checked" Unchecked="cbToggleAll_Unchecked"/>
         <TextBox x:Name="tbCount" Grid.Column="2" HorizontalAlignment="Left" Margin="12,0,0,10" TextWrapping="Wrap" Width="38" IsEnabled="False" Height="23" VerticalAlignment="Bottom"/>
-        <Label Content="currently selected" Grid.Column="2" HorizontalAlignment="Left" Margin="55,0,0,10" Height="26" VerticalAlignment="Bottom"/>
+        <Label Content="currently selected" Grid.Column="2" HorizontalAlignment="Left" Margin="55,0,0,8" Height="26" VerticalAlignment="Bottom"/>
         <CheckBox x:Name="cbClipSep" Content="New Line?" Grid.Column="2" HorizontalAlignment="Left" Margin="131,53,0,0" VerticalAlignment="Top"/>
+        <GroupBox Grid.Column="2" Header="Strawpoll Settings" Margin="13,132,10,41">
+            <Grid Margin="0,10,-12,-22">
+                <Label Content="Title" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
+                <TextBox x:Name="tbTitle" HorizontalAlignment="Left" Height="23" Margin="47,13,0,0" TextWrapping="Wrap" Text="Moobers" VerticalAlignment="Top" Width="181"/>
+                <Label Content="Multiselect" HorizontalAlignment="Left" Margin="10,38,0,0" VerticalAlignment="Top"/>
+                <Label Content="Duplication Check" HorizontalAlignment="Left" Margin="10,61,0,0" VerticalAlignment="Top"/>
+                <Label Content="Captcha" HorizontalAlignment="Left" Margin="10,84,0,0" VerticalAlignment="Top"/>
+                <CheckBox x:Name="cbMulti" Content="" HorizontalAlignment="Left" Margin="134,45,0,0" VerticalAlignment="Top"/>
+                <CheckBox x:Name="cbCaptcha" Content="" HorizontalAlignment="Left" Margin="134,89,0,0" VerticalAlignment="Top"/>
+                <ComboBox x:Name="cbDup" HorizontalAlignment="Left" Margin="134,64,0,0" VerticalAlignment="Top" Width="94" SelectedIndex="0">
+                    <ComboBoxItem Content="Normal"/>
+                    <ComboBoxItem Content="Permissive"/>
+                    <ComboBoxItem Content="Disabled"/>
+                </ComboBox>
+            </Grid>
+        </GroupBox>
 
     </Grid>
 </Window>

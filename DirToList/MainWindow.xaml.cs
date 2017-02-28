@@ -127,7 +127,7 @@ namespace DirToList
                     //s = "[\"test\",\"test2\"]";
                     //byte[] r2 = client.DownloadData("https://strawpoll.me/api/v2/polls/1");
                     //string res = System.Text.Encoding.UTF8.GetString(r2);
-                    var memoirs = "{\"title\":\"Moobers\",\"options\":" + s + ",\"multi\":\"true\",\"dupcheck\":\"normal\",\"captcha\":\"false\"}";
+                    var memoirs = "{\"title\":\"" + tbTitle.Text + "\",\"options\":" + s + ",\"multi\":\"" + cbMulti.IsChecked.ToString().ToLower() + "\",\"dupcheck\":\""+((ComboBoxItem)cbDup.SelectedValue).Content.ToString().ToLower()+"\",\"captcha\":\"" + cbCaptcha.IsChecked.ToString().ToLower() + "\"}";
                     string response =
                     client.UploadString("https://strawpoll.me/api/v2/polls", memoirs);
                     if (response.Contains("\"id\":"))
